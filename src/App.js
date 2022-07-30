@@ -3,10 +3,23 @@ import './App.css';
 
 import HomePage from './pages/homePage.component';
 
-function App() {
+import {Route, Routes} from 'react-router-dom';
+
+ const HatsPage= () => {
+  return(
+    <div>
+      HATS PAGE
+    </div>
+  )
+ }
+
+function App() { 
   return (
     <div>
-      <HomePage />
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/hats' element={<HatsPage/>}/>
+      </Routes>
     </div>
   );
 }
